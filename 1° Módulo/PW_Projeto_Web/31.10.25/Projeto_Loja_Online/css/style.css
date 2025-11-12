@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color:#1e1e1e;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 3px solid #40C6DE;
+}
+
+.temaPagina{
+    image-orientation: flip;
+}
+
+    
+}
+
+.container{
+    background-color: #eee;
+    min-height:  60vh;
+    padding: 50px;
+}
+
+.produtos-container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card{
+    width: 31%;
+    margin: 1%;
+    display: inline-block;
+    padding: 15px;
+}
+
+.produto-image{
+    width: 100%;
+    height: 300px;
+    margin-bottom: 10px;
+    background-position: center;
+    background-size: cover;
+}
+
+#img-1{
+    background-image:url("../img/tenis1.jpg");
+}
+
+#img-2{
+    background-image:url("../img/tenis2.jpg");
+}
+
+#img-3{
+    background-image:url("../img/tenis3.jpg");
+}
+
+#img-4{
+    background-image:url("../img/tenis4.jpg");
+}
+
+#img-5{
+    background-image:url("../img/tenis5.jpg");
+}
+
+#img-6{
+    background-image:url("../img/tenis6.jpg");
+}
+
+h3{
+    margin-bottom: 10px;
+    color: #5262EF;
+    border-left: 5px solid #40C6DE;
+    padding-left: 7px;
+    font-size: 24px;
+}
+
+.card p{
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+.bold{
+    font-weight: 900;
+}
+
+.btn{
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #2C1D5C;
+    color: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    transition: .4s;
+}
+
+.btn:hover{
+    background-color: #3457ED;
+}
+
+footer{
+    background-color: tomato;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    border-top: 3px solid red;
+}

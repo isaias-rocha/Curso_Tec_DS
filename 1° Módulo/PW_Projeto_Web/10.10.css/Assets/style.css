@@ -1,0 +1,63 @@
+
+
+body {
+    background-color: #D3ECCD;
+    color: #212121;
+}
+
+/*Titulos textos*/
+h1 {
+    background-color: #06923E;
+    border-radius: 7px;
+    font-size: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style:normal
+    
+    
+}
+
+p {
+    background: #E67514;
+    width: 15%;
+    height: 15%;
+    
+    border: 2px solid green;
+    border-radius: 15px;
+    font-size: 30px;
+    font-family: sans-serif;
+
+    text-align: center;
+}
+
+/* seletor id #*/
+#menu{
+    background: #006A67;
+    width: 30%;
+    height: 30%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+    border: 2px solid red;
+    border-radius: 15px;
+    font-size: 30px;
+    text-align: center;
+}
+
+/* seletor classe . */
+.inicio {
+    background: #6a5acd ;
+    width: 30%;
+    height: 30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    border: 2px solid yellow;
+    border-radius: 15px;
+    font-size: 30px;
+    
+    text-align: center;
+} 
