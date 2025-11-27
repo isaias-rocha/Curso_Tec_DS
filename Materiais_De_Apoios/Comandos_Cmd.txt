@@ -1,0 +1,15 @@
+cd ..
+cd /
+cd <caminho_completo> C:\Usuarios\SeuUsuario\Documentos
+mkdir <nome_da_pasta>: ou md <nome_da_pasta>
+ren <nome_atual> <novo_nome>
+rd <nome_da_pasta>: ou rmdir <nome_da_pasta>: Remove um diretório vazio.
+move <origem> <destino>
+move /Y *.txt <pasta de destino>
+dir *.txt
+dir /s /b C:\*.txt
+dir /s /b C:\*.txt > C:Users\jose_86045\lista_txt.txt
+dir: Lista o conteúdo de um diretório. 
+/s: Inclui subpastas na busca. 
+/b: Formato de saída apenas com nomes de arquivo. 
+C:\*.txt: Especifica a unidade C e busca todos os arquivos com extensão .txt. 
