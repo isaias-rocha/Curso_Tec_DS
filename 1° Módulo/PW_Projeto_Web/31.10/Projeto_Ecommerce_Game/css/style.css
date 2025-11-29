@@ -1,0 +1,405 @@
+/* ===========================================================
+   RESET / PADRÃO GLOBAL
+   =========================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background-color 0.5s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* ===========================================================
+   TEMAS (CLARO E ESCURO)
+   =========================================================== */
+
+/* ---------- TEMA CLARO ---------- */
+body.light-mode {
+    background-color: white;
+    color: black;
+}
+
+body.light-mode header {
+    background-color: #1F2421;
+    color: black;
+    border-bottom: 3px solid #1F2421;
+}
+
+body.light-mode .container {
+    background-color: white;
+}
+
+body.light-mode .card {
+    background-color: #d7d7d7;
+    color: black;
+}
+
+body.light-mode h3 {
+    color: black;
+    border-left-color: #FFF05A;
+}
+
+body.light-mode footer {
+    background-color: #1F2421;
+    color: white;
+}
+
+body.light-mode .bold{
+    color: black;
+}
+
+body.light-mode .btn {
+    background-color: #1F2421;
+    color: white;
+}
+
+body.light-mode .btn:hover {
+    background-color: #FFF05A;
+    color: black;
+}
+
+body.light-mode nav.menu a {
+    background-color: #1F2421;
+    border-color: #1F2421;
+    color: white;
+}
+
+body.light-mode nav.menu a:hover {
+    background-color: #FFF05A;
+    color: #1F2421;
+}
+
+/* ---------- TEMA ESCURO (PADRÃO) ---------- */
+body.dark-mode {
+    background-color: #1F2421;
+    color: white;
+}
+
+body.dark-mode header {
+    background-color: #1F2421;
+    color: white;
+    border-bottom: 1px solid gray;
+}
+
+body.dark-mode .container {
+    background-color: #1F2421;
+}
+
+body.dark-mode .card {
+    background-color: #2b2b2b;
+    color: white;
+}
+
+body.dark-mode h3 {
+    color: white;
+    border-left-color: #FFF05A;
+}
+
+body.dark-mode p,
+body.dark-mode span {
+    color: white;
+}
+
+body.dark-mode footer {
+    background-color: #1F2421;
+    color: white;
+}
+
+body.dark-mode .btn {
+    background-color: #1F2421;
+    color: white;
+}
+
+body.dark-mode .btn:hover {
+    background-color: #FFF05A;
+}
+
+/* ===========================================================
+   SWITCH DO TEMA CLARO / ESCURO (☀️/🌙)
+   =========================================================== */
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 30px;
+    transition: background-color 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6px;
+    font-size: 18px;
+}
+
+.slider .sun,
+.slider .moon {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+input:checked + .slider {
+    background-color: #d8d8d8;
+}
+
+input:checked + .slider .sun {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+input:checked + .slider .moon {
+    opacity: 1;
+    transform: translateX(10px);
+}
+
+input:not(:checked) + .slider .moon {
+    opacity: 0;
+    transform: translateX(10px);
+}
+
+input:not(:checked) + .slider .sun {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ===========================================================
+   ESTRUTURA BÁSICA (HEADER / CONTAINER / FOOTER)
+   =========================================================== */
+header {
+    background-color: #1F2421;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-bottom: 3px solid gray;
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium';
+    font-size: larger;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    background-color: #1F2421;
+    min-height: 60vh;
+    padding: 50px;
+}
+
+footer {
+    background-color: #1F2421;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-top: 3px solid gray;
+}
+
+
+/* ===========================================================
+   MENU PRINCIPAL (NAV)
+   =========================================================== */
+nav.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap:wrap;
+    margin: 20px 0;
+}
+
+nav.menu a {
+    width: auto;
+    padding: 12px 28px;
+    background-color: #FFF05A;
+    border: 2px solid #FFF05A;
+    border-radius: 10px;
+    font-family: 'Franklin Gothic Medium';
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #1F2421;
+    transition: all 0.3s ease;
+}
+
+nav.menu a:hover {
+    background-color: #1F2421;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* ---------- MENU RESPONSIVO ---------- */
+@media (max-width: 600px) {
+    nav.menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav.menu a {
+        width: 80%;
+        padding: 14px;
+    }
+}
+
+
+/* ===========================================================
+   PRODUTOS / CARDS
+   =========================================================== */
+.produtos-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card {
+    width: 31%;
+    margin: 1%;
+    display: inline-block;
+    padding: 40px;
+}
+
+.produto-image {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 10px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+
+/* ---------- IMAGENS DOS CONSOLES ---------- */
+#img-1 {
+    background: url("../img/1.playstation2.png") no-repeat center/contain;
+    background-color: #0070CC;
+}
+
+#img-2 {
+    background: url("../img/4.play5.png") no-repeat center/contain;
+    background-color: #0070CC;
+}
+
+#img-3 {
+    background: url("../img/3.xbox_seriesX.png") no-repeat center/contain;
+    background-color: #107C10;
+}
+
+#img-4 {
+    background: url("../img/2.xbox360.png") no-repeat center/contain;
+    background-color: #107C10;
+}
+
+#img-5 {
+    background: url("../img/5.nintendosSW2.png") no-repeat center/contain;
+    background-color: #b71422;
+}
+
+#img-6 {
+    background: url("../img/6.nintendo3ds.png") no-repeat center/contain;
+    background-color: #b71422;
+}
+
+/* ===========================================================
+   IMAGENS DOS JOGOS
+   =========================================================== */
+#img-7 {
+    background-image: url("/img/jogo_halo_infinite.jpg"); /* halo infinite */
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid #107C10; /* verde Xbox */
+    border-radius: 10px;
+}
+
+#img-8 {
+    background-image: url("/img/jogo_god_of_war.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid #0070CC; /* azul PlayStation */
+    border-radius: 10px;
+}
+
+#img-9 {
+    background-image: url("/img/jogo_zelda_totk.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid #14b2b7; /* vermelho Nintendo */
+    border-radius: 10px;
+}
+
+#img-10 {
+    background-image: url("../img/jogo_spiderman2.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid #E60012; /* vermelho Marvel */
+    border-radius: 10px;
+}
+
+#img-11 {
+    background-image: url("/img/jogo_forza_horizon5.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid #f39c12; /* dourado */
+    border-radius: 10px;
+}
+
+#img-12 {
+    background-image: url("/img/jogo_re4_remake.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #767373;
+    border-radius: 10px;
+}
+
+
+/* ===========================================================
+   TEXTOS E BOTÕES DE PRODUTOS
+   =========================================================== */
+h3 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    border-left: 5px solid #FFF05A;
+    padding-left: 7px;
+    font-size: 24px;
+}
+
+.card p {
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.bold {
+    font-weight: 900;
+    
+}
+
+.btn_compra {
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #FFF05A;
+    font-family: 'Franklin Gothic Medium';
+    color: #1F2421;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn_compra:hover {
+    background-color: #111412;
+    color: #FFF05A;
+    transform: scale(1.1);
+}

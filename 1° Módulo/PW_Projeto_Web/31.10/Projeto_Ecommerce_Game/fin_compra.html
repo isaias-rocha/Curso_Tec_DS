@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Finalizar Compra</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
+
+    <script defer src="JS/script.js"></script>
+</head>
+
+<body class="dark-mode">
+
+    <header>
+        <h1>Finalização De Compra</h1>
+        <nav class="menu">
+             <a href="cadastro.html" class="btn">Cadastro</a>
+            <a href="consoles.html" class="btn">Consoles</a>
+            <a href="jogos.html" class="btn">Jogos</a>
+            <a href="fin_compra.html" class="btn">Finalizar Compra</a>
+        
+            <div class="theme-switch-wrapper" style="position:absolute; top:20px; right:20px;">
+                <label class="theme-switch">
+                    <input type="checkbox" id="toggle-theme">
+                <span class="slider">
+                    <span class="sun">☀️</span>
+                    <span class="moon">🌙</span>
+                </span>
+            </label>
+        </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="checkout-container">
+            <!-- RESUMO DO CARRINHO -->
+            <div class="cart-summary">
+                <h2>Itens no Carrinho</h2>
+                <ul id="cart-items"></ul>
+                <div class="total">
+                    <h3>Total: R$ <span id="cart-total">0.00</span></h3>
+                    <button id="clear-cart" class="btn danger">Esvaziar Carrinho</button>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- FORMULÁRIO DE COMPRA -->
+            <div class="checkout-form">
+                <h2>📦 Dados do Cliente</h2>
+                <form id="checkout-form">
+                    <label for="nome">Nome completo:</label>
+                    <input type="text" id="nome" required placeholder="Ex: João Silva">
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" required placeholder="Ex: joao@email.com">
+
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" required placeholder="Rua, número, bairro">
+
+                    <label for="pagamento">Forma de pagamento:</label>
+                    <select id="pagamento" required>
+                        <option value="">Selecione</option>
+                        <option value="cartao">Cartão de Crédito</option>
+                        <option value="pix">PIX</option>
+                        <option value="boleto">Boleto Bancário</option>
+                    </select>
+
+                    <button type="submit" class="btn success">✅ Confirmar Compra</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><span class="bold">Galeria dos Games</span> &copy; 2025</p>
+        <p class="criador">Create By: Isaias</p>
+    </footer>
+
+</body>
+</html>
