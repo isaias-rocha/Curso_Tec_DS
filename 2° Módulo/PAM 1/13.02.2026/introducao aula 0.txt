@@ -1,0 +1,15 @@
+Um aplicativo é formado por uma tela e um código que pode ser java ou kotlin.
+O java (MainActivity.java) usa um padrão chamado CamelCase.
+Classes		- todo nome de classe começa com letra maiuscula
+Variáveis	- todo nome de variáveis começa com letra minúscula
+Métodos		- igual ao padrão de variáveis, mas tem parênteses no final ( )
+Constantes	- todas as letras em maiúsculo. Se o nome for composto, separar com um underline.
+Quando o nome da classe, variável ou método for composto, a primeira letra da palavra seguinte será maiúscula;
+Exemplos:
+classes: MainActivity, AppCompatActivity, MediaPlayer
+variáveis: nomeUsuario, editNome, editSenha
+métodos: cadastrarUsuario(), checkNome();
+constantes: LENG_LONG, LENG_SHORT, MATH
+Nenhum nome pode conter espaço, acentuação, cecidilha ou começar com numero ou caracter especial
+
+Para os arquivos de tela, usamos o padrão snake_case: todas minúsculas, e quando for composta, usar um underline 

@@ -1,3 +1,5 @@
+
+
 body {
   background-color:#1F2421;
   background-repeat: no-repeat;
@@ -33,7 +35,7 @@ body {
 
 
 nav.menu {
-    display: flex;
+    position: fixed;
     justify-content: center;
     align-items: center;
     gap: 25px;
