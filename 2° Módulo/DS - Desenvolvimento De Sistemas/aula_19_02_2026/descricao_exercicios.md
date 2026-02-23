@@ -18,7 +18,7 @@
 
 
 
-&nbsp;\* 4. Quais os problemas que a linguagejjava é capaz de sanar?
+&nbsp;\* 4. Quais os problemas que a linguagem java é capaz de sanar?
 
 
 
@@ -52,11 +52,12 @@
 
 &nbsp;       2- ir em *"New Project",* ou utilizando atalho (Ctrl + Shift + N).
 
-&nbsp;	3- vai em: **Categories** -> **Java with Ant** -> **Java	Application -> clica no botão Next.**
+&nbsp;		3- vai em: **Categories** -> **Java with Ant** -> **Java	Application -> clica no botão Next.**
 
-	4- Digite o nome do seu projeto.
+			4- Digite o nome do seu projeto.
 
-&nbsp;	5 - Clica em Next.
+&nbsp;		5 - Clica em Next.
+
 
 
 
