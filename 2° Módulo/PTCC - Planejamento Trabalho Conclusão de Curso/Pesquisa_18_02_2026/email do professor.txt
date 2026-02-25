@@ -1,0 +1,35 @@
+email para enviar a pesquisa: Paulo.oliveira381@etec.sp.gov.br
+
+
+livro: Gestão de Projetos 
+autor: antonio cesar
+
+
+
+Equipe: Isaias, Matheus, Luis, Julio Cesar, Nicoly
+Scrum Master: Isaias Rocha
+
+
+
+Isaias - ideias do PTCC:
+
+* Pequena transportadora - Rastreamento de entregas - Médio
+* 🏢 ERP para Pequenas Empresas - Financeiro + estoque + vendas + relatórios avançados - Hard
+
+
+prompt chatgpt: (
+
+você é um scrum master do projeto TCC de Desenvolvimento de sistemas: crie brandstorming de alguns projetos iniciantes para 5 alunos.
+
+áreas em tópicos de tabela:
+
+
+problematização?
+qual a dor?
+e por que é importante?
+O uqe já pode ser melhorados?
+
+cite áreas ninchadas, separadas para não gerar conflitos
+
+e algumas observações, o que fazer por partes utilizando a metodologia kanban)
+
