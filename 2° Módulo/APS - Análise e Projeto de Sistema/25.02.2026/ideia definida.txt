@@ -1,0 +1,17 @@
+aluno: Luis Fernando Almeida De Oliveira 
+
+Tema do TCC: Desenvolvimento de um Aplicação para Monitoramento de Áreas de Risco.
+
+Área do Tema: Tecnologia da Informação / Segurança.
+
+Público-Alvo: Pessoas que moram em àrea de risco.
+
+Problematização: falta de segurança nos locais.
+
+Pergunta problema: Como um aplicativo pode auxiliar no monitoramento preventivo da segurança?
+	-
+
+Justificativa: Aplicativos de saúde ajudam na prevenção e reduzem custos hospitalares. Modelo base para ciração do aplicativo: Life360.
+	O aplicativo pode:
+•	Demonstrar áreas de risco utilizandon GPS em tempo real.
+•	Acionar a ocorrência para a policia.

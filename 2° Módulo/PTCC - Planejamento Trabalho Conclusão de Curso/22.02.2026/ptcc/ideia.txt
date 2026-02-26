@@ -1,0 +1,34 @@
+3º Lugar – App de Monitoramento de Saúde Preventiva
+
+Tema do TCC:
+Desenvolvimento de um Aplicativo para Monitoramento de Saúde Preventiva
+
+Área do Tema:
+Tecnologia da Informação / Saúde Digital
+
+Público-Alvo:
+Adultos com doenças crônicas (diabetes, hipertensão).
+
+Problematização:
+Falta de acompanhamento contínuo leva a complicações graves.
+
+Pergunta problema:
+Como um aplicativo pode auxiliar no monitoramento preventivo da saúde?
+
+Justificativa:
+Aplicativos de saúde ajudam na prevenção e reduzem custos hospitalares.
+
+O aplicativo pode:
+
+Registrar pressão e glicemia
+
+Lembretes de medicação
+
+Gráficos de evolução
+
+Relatórios em PDF
+
+Integração com dispositivos wearable
+
+========================================================
+
