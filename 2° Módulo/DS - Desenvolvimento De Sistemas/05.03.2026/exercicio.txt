@@ -1,0 +1,12 @@
+faça um programa em Java no qual o usuário entra com um valor chamado "media" nas seguintes condições:
+
+se media for maior que 7.5 = aprovado, e media for maior que 6 e menor que 7.5 = fazer um trabalho, se media maior que 5 e menor que 6 = recuperação, se media for maior que 4 e menor que 5 = reprovado, se media menor que 4 = rebaixado para o ano anterior, se media menor que 0 = reiniciar tudo.
+
+=======================================================================================================================================
+
+ se media for maior que 7.5 = aprovado
+ se media for maior que 6 e menor que 7.5 = fazer um trabalho
+ se media maior que 5 e menor que 6 = recuperação
+ se media for maior que 4 e menor que 5 = reprovado
+ se media menor que 4 = rebaixado para o ano anterior
+ se media menor que 0 = reiniciar tudo.
