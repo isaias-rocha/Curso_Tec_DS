@@ -10,3 +10,8 @@ se media for maior que 7.5 = aprovado, e media for maior que 6 e menor que 7.5 =
  se media for maior que 4 e menor que 5 = reprovado
  se media menor que 4 = rebaixado para o ano anterior
  se media menor que 0 = reiniciar tudo.
+
+
+faça um programa em java, no qual entre os 3 valores esses valores formaram um triangulo.
+Diferencie se Equilatero, se Esolicis, Se Escalero. 
+Caso o valor 0, não forma um triângulo.
