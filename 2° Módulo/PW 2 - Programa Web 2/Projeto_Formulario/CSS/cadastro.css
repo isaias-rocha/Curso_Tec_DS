@@ -1,0 +1,12 @@
+:root {
+    font-size: 62.5%;
+}
+
+* {
+ background: aliceblue; 
+}
+
+input {
+ margin: 0.5rem;
+}
+
