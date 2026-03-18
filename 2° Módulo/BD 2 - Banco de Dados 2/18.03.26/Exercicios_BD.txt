@@ -1,0 +1,23 @@
+Exercicios
+
+
+ex1:Vitima 
+(
+id int auto incrementy primary key,
+nome varchar (30),
+telefone int (11),
+cpf int (11)
+)
+
+ex2: Crime 
+
+(	
+id int auto incrementy primary key,
+desc_ocorrido - varchar (500),
+data - datetime
+
+local_logradouro - varchar,
+local_bairro - varchar,
+local_cidade - varchar,
+local_estado - var (2)
+)
