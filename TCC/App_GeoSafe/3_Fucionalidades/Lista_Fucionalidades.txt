@@ -47,6 +47,3 @@ Gerenciamento de perfil e preferências.
 * **Integração com dispositivos wearable (opcional)**
 
 Monitoramento adicional e acionamento rápido de alertas.
-
-
-
