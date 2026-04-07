@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/cadastro.css">
+    <script src="JS/cadastrar.js"></script>
+    <title>Cadastro</title>
+</head>
+
+<body>
+
+    <div class="contorno">
+
+        <!-- action: 
+         method: -->
+        <form action="process.php" method="post">
+            <h1>Cadastro</h1>
+
+            <input type="text" name="nome" id="nomeDigitado" placeholder="Nome" Completo><br>
+            <input type="text" nome="endereco" id="enderecoDigitado" placeholder="Endereço" required="true"
+                minlength="5" /><br>
+            <input type="email" nome="email" id="emailDigitado" placeholder="E-mail" required="true"
+                minlength="5" /><br>
+            <input type="password" nome="senha" id="senhaDigitada" placeholder="Senha" required="true"
+                minlength="5" /><br>
+
+            <button type="submit" id="botao" onclick="validarFormulario()">Cadastrar</button>
+            <!--type "submt" dentro de um <form> eviar os dados ao action.
+                O onclick ainda chama validarFormulario() antes de enviar
+                se a função retornar false, o envio é cancelado-->
+        </form>
+    </div>
+
+
+    <script src="JS/cadastrar.js"></script>
+</body>
+
+</html>
