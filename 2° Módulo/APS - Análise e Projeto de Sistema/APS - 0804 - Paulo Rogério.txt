@@ -1,0 +1,28 @@
+APS - 08/04 - Paulo Rogério
+
+- Acrescentar +1 na equipe, possibilidade de aceitar um colega. (Equipe 01 colocou o Gilson)
+
+- Avaliação Técnica - Apresentação {
+	* Confusão de início - qual é a nossa proposta?
+	* O que a gente está resolvendo?
+	* Explicar melhor as funcionalidades, esboço, Requisitos.
+	* Ressaltar o [Botão de alerta] vai ter forma sutis de ativá-lo.
+	* Não usar palavras: "A gente", "Eu fiz". Trocar por: "Nós/Equipe Pesquisamos, Analisamos".
+	* Fazer a apresentação de forma "Mais relaxada e natural".
+	* Correntes colocar origem (pais)e empresa.
+	* Que tipo de empresa no Brasil faz parecido.
+        * sem informações de apps descontinuados ou dados de uma passado muito distante.
+        * Dado de gasto de segurança da iniciativa Privada.
+        * Pensar no app para a iniciativa privada.
+        * Erro de formatação no slide da apresentação.
+	* Pesquisa de segurança Privada.
+	* 
+
+
+
+
+	
+}
+
+Gilson - explicar Pesquisa
+

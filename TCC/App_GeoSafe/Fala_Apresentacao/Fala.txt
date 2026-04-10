@@ -1,0 +1,38 @@
+1- solucao
+2- esboco
+3- justificativa
+4- Tecnologia
+5- Requisitos
+
+
+
+Solução: 
+
+	Pensando nisso, a proposta deste trabalho é o desenvolvimento de um aplicativo de segurança pessoal.
+Esse aplicativo terá como principal funcionalidades:
+	um botão de emergência, que ao ser acionado, envia alertas automáticos para contatos previamente cadastrados
+ e bloquea o smartphone, além de compartilhar a localização em tempo real do usuário.
+
+=======================================================
+
+Explicar o esboço 
+com as funcionalidades
+
+=========================================================
+
+Justificativa
+
+======================================================
+
+A escolha desse tema se justifica pela crescente preocupação com a segurança e pela necessidade de soluções acessíveis.
+Logo, a tecnologia está presente no cotidiano das pessoas e pode ser utilizada como uma ferramenta de proteção, trazendo impacto social positivo.
+
+======================================================
+
+Tecnologias
+
+As tecnologias utilizadas incluem ferramentas de desenvolvimento mobile utilizando a linguagem java/Kotlin, utilizar banco de dados relacional (Mysql), e APIs de geolocalização, que permitem o funcionamento do sistema de localização em tempo real.
+
+=======================================================
+
+- Requisitos
