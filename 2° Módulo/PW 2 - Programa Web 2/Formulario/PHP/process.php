@@ -11,7 +11,6 @@ if($_SERVER['REQUEST_METHOD'] !== 'POST'){
 }
 //PASSO 3 - Lê os campos e valida
 $campos = array_map('trim', $_POST); //remove espaço em branco
-
 $erros = [];
 
 foreach ($campos as $nome => $valor) {
