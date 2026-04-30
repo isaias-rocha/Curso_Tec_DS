@@ -16,6 +16,6 @@ DriverManager.getConnection("jdbc:mysql://localhost/projetojava","root","");
  }
  catch(SQLException excecao) {
  throw new RuntimeException(excecao);
- }
- }
+        }
+    }
 }
