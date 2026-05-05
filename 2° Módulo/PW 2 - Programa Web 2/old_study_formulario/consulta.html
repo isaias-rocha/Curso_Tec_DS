@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/consulta.css">
+    <title>Consulta de Dados</title>
+
+</head>
+
+
+<body>
+    <div class="container">
+        <h2>Buscar Cadastro</h2>
+
+        <form id="consultaForm" action="consulta.php" method="post">
+            <img src="img/botao-voltar.png">
+
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="exemplo@dominio.com">
+            </div>
+            <button id="btnConsultar">Consultar Dados</button>
+
+        </form>
+    </div>
+
+
+    <div id="tabelaResultado">
+        <table class="table table-borded table-hover table-sm mt-2">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Criado em</th>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Endereço</th>
+                    <th>Senha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="col-id"></td>
+                    <td id="col-criado_em"></td>
+                    <td id="col-nome"></td>
+                    <td id="col-email"></td>
+                    <td id="col-endereco"></td>
+                    <td id="col-senha"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <script> src = "https://cdn.jsdelivr.net/npmb/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"</script>
+    </script>
+</body>
+
+</html>
