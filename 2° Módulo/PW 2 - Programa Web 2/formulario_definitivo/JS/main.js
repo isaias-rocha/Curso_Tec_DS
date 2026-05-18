@@ -5,9 +5,12 @@ document.getElementById("nomeDigitado").focus();
 function validarFormulario() {
     let nome = document.getElementById("nomeDigitado");
     let email = document.getElementById("emailDigitado");
+    let senha = document.getElementById("senhaDigitada");
     let endereco = document.getElementById("enderecoDigitado");
+    let telefone = document.getElementById("telefoneDigitado");
+    let cpf = document.getElementById("cpfDigitado");
 
-    [nome, email, endereco].forEach(el => el.style.boxShadow = "none");
+    [nome, email, senha, endereco, telefone, cpf].forEach(el => el.style.boxShadow = "none");
 
     if (nome.value.trim() === "") {
         alert("Por favor, preencha o campo de nome.");
@@ -21,8 +24,26 @@ function validarFormulario() {
         email.focus();
         return false;
     }
+    if (senha.value.trim() === "") {
+        alert("Por favor, preencha o campo de endereco.");
+        endereco.style.boxShadow = "0 0 5px #ffc107";
+        endereco.focus();
+        return false;
+    }
     if (endereco.value.trim() === "") {
-        alert("Por favor, preencha o campo de endereço.");
+        alert("Por favor, preencha o campo de senha.");
+        endereco.style.boxShadow = "0 0 5px #ffc107";
+        endereco.focus();
+        return false;
+    }
+    if (telefone.value.trim() === "") {
+        alert("Por favor, preencha o campo de telefone.");
+        endereco.style.boxShadow = "0 0 5px #ffc107";
+        endereco.focus();
+        return false;
+    }
+    if (cpf.value.trim() === "") {
+        alert("Por favor, preencha o campo de cpf.");
         endereco.style.boxShadow = "0 0 5px #ffc107";
         endereco.focus();
         return false;
@@ -41,7 +62,10 @@ function popularTabela(json) {
     document.getElementById('col-id').textContent = json.cadastro.id;
     document.getElementById('col-nome').textContent = json.cadastro.nome;
     document.getElementById('col-email').textContent = json.cadastro.email;
+    document.getElementById('col-senha').textContent = json.cadastro.senha;
     document.getElementById('col-endereco').textContent = json.cadastro.endereco;
+    document.getElementById('col-telefone').textContent = json.cadastro.telefone;
+    document.getElementById('col-cpf').textContent = json.cadastro.cpf;
 
     document.getElementById('tabelaResultado').style.display = 'block';
 }

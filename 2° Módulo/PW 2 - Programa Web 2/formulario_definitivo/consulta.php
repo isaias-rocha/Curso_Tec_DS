@@ -4,6 +4,7 @@ require_once 'conexao.php';
 //PASSO 1 - Responde sempre em JSON (sem HTML)
 header ('Content-Type: application/json; charset=utf-8');//definindo o tipo de codificação que vai ser usado 
 
+
 //PASSO 2 - Garante que veio de um formulário
 if($_SERVER['REQUEST_METHOD'] !== 'POST'){//POST METEDO DE PROTOCOLO http
     http_reponse_code(405);
@@ -16,7 +17,7 @@ if ($email === '') {
 }
 
 try{
-    $pdo ->exec('USE `' . DB_NAME . '`');
+    $pdo ->exec('USE `' . db_cadastro . '`');
     $stmt = $pdo ->prepare('SELECT * FROM `cadastros` WHERE email = ?');
     $stmt->execute([$email]);
     $cadastro = $stmt ->fetch(PDO::FETCH_ASSOC);
