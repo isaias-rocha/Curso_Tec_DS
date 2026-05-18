@@ -1,0 +1,110 @@
+:root {
+    font-size: 62.5%;
+}
+
+body{
+      font-family: 'Roboto'
+    }
+
+
+/* Cabeçalho */
+header {
+    background: #111;
+    padding: 15px 40px;
+    margin-bottom: 3.0rem;
+}
+
+/* Menu de Navegacao */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+    transition: 0.3s;
+}
+
+.menu li a:hover {
+    color: violet;
+}
+
+
+/* Formulario */
+
+
+/* Footer da pagina */
+
+    .footer{
+      background: #0f172a;
+      color: white;
+      padding: 25px 10%;
+      margin-top: 3.0rem;
+      border-radius: 1.0rem;
+    }
+
+    .footer-content{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-logo{
+      font-size: 22px;
+      font-weight: bold;
+      color: #38bdf8;
+    }
+
+    .footer-links{
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-links a{
+      color: #cbd5e1;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .footer-links a:hover{
+      color: #38bdf8;
+    }
+
+    .footer-copy{
+      margin-top: 20px;
+      text-align: center;
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    /* Footer Responsivo */
+    @media(max-width:768px){
+
+      .footer-content{
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-links{
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+    }

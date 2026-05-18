@@ -4,20 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="css/">
-    <link rel="stylesheet" href="css/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Sistema de Cadastro e Consulta - Talentos</title>
 </head>
 
 <body>
 
-    <head>
-        <ul>home</ul>
-        <ul>cadsatro</ul>
-        <ul>consulta</ul>
-        <ul>sobre</ul>
-    </head>
+    <header>
+        <nav class="navbar">
+            <div class="logo">LogoSite</div>
+
+            <ul class="menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="consulta.html">Consulta</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
 
 
     <main>
@@ -27,6 +37,9 @@
                 <!-- SEÇÃO DE CADASTRO (EM CIMA) -->
                 <div class="card-custom">
                     <h2>Ficha Cadastral</h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+</svg>
                     <p class="instrucoes">Preencha os campos abaixo para entrar em nosso banco de talentos.</p>
 
                     <form action="process.php" method="post" id="formCadastro">
@@ -49,24 +62,84 @@
                                 <label class="form-label">Telefone</label>
                                 <input type="number" name="telefone" id="telefoneDigitado" class="form-control"
                                     placeholder="00 0000-0000">
-                                    
+
                                 <div class="mb-3">
                                     <label class="form-label">CPF</label>
                                     <input type="number" name="cpf" id="cpfDigitado" class="form-control"
                                         placeholder="000.000.000-00">
-                                    <button type="submit" class="btn btn-primary"></button>
+                                    <button type="submit" class="btn btn-primary w-100"
+                                        onclick="return validarFormulario()">Cadastrar</button>
                                 </div>
                             </div>
                     </form>
                 </div>
             </div>
         </div>
+
+        <!-- SEÇÃO DE CONSULTA (EMBAIXO) -->
+        <div class="card-custom">
+            <h2> Buscar Cadastro </h2>
+            <p class="instrucoes">Digite o e-mail cadastrado para localizar seus dados no sistema.</p>
+
+            <form id="consultaForm">
+                <div class="mb-3">
+                    <label for="emailBusca" class="form-label">E-mail de Busca</label>
+                    <input type="email" id="emailBusca" class="form-control" placeholder="exemplo@dominio.com" required>
+
+                    <button type="submit" id="btnConsultar" class="btn btn-outline-primary w-100">Consultar
+                        Dados</button>
+                </div>
+            </form>
+
+            <div id="tabelaResultado" class="mt-4">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover table-sm">
+                        <thead class="table-light">
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>E-mail</th>
+                                <th>Endereço</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="col-id"></td>
+                                <td id="col-nome"></td>
+                                <td id="col-email"></td>
+                                <td id="col-endereco"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
     </main>
 
 
-    <footer>
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div class="footer-logo">
+                MeuSite
+            </div>
+
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">Sobre</a>
+                <a href="#">Contato</a>
+                <a href="#">Privacidade</a>
+            </div>
+
+        </div>
+
+        <div class="footer-copy">
+            © 2026 MeuSite - Todos os direitos reservados.
+        </div>
 
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
