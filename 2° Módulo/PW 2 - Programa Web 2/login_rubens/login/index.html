@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Talentos - Cadastro e Consulta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --primary-hover: #357abd;
+            --bg-color: #f4f7f6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            padding: 2rem 0;
+        }
+
+        /* Centraliza e limita a largura dos cards */
+        .main-container {
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .card-custom {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 2rem; /* Espaço entre os cards */
+        }
+
+        h2 { color: var(--primary-color); margin-bottom: 1.5rem; }
+        
+        .btn-primary { background-color: var(--primary-color); border: none; }
+        .btn-primary:hover { background-color: var(--primary-hover); }
+
+        #tabelaResultado { display: none; }
+        .instrucoes { font-size: 0.9rem; color: #666; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="main-container">
+        
+        <!-- SEÇÃO DE CADASTRO (EM CIMA) -->
+        <div class="card-custom">
+            <h2>Ficha Cadastral</h2>
+            <p class="instrucoes">Preencha os campos abaixo para entrar em nosso banco de talentos.</p>
+            
+            <form action="process.php" method="post" id="formCadastro">
+                <div class="mb-3">
+                    <label class="form-label">Nome Completo</label>
+                    <input type="text" name="nome" id="nomeDigitado" class="form-control" placeholder="Seu nome">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">E-mail</label>
+                    <input type="email" name="email" id="emailDigitado" class="form-control" placeholder="exemplo@email.com">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Endereço</label>
+                    <input type="text" name="endereco" id="enderecoDigitado" class="form-control" placeholder="Rua, Número, Bairro">
+                </div>
+                <button type="submit" class="btn btn-primary w-100" onclick="return validarFormulario()">Cadastrar</button>
+            </form>
+
+            <!-- Feedback do cadastro (preenchido via JS após retorno JSON do process.php) -->
+            <div id="feedbackCadastro" class="mt-3" role="alert" style="display:none"></div>
+        </div>
+
+        <!-- SEÇÃO DE CONSULTA (EMBAIXO) -->
+        <div class="card-custom">
+            <h2>Buscar Cadastro</h2>
+            <p class="instrucoes">Digite o e-mail cadastrado para localizar seus dados no sistema.</p>
+            
+            <form id="consultaForm">
+                <div class="mb-3">
+                    <label for="emailBusca" class="form-label">E-mail de Busca</label>
+                    <input type="email" id="emailBusca" class="form-control" placeholder="exemplo@dominio.com" required>
+                </div>
+                <button type="submit" id="btnConsultar" class="btn btn-outline-primary w-100">Consultar Dados</button>
+            </form>
+
+            <div id="tabelaResultado" class="mt-4">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover table-sm">
+                        <thead class="table-light">
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>E-mail</th>
+                                <th>Endereço</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="col-id"></td>
+                                <td id="col-nome"></td>
+                                <td id="col-email"></td>
+                                <td id="col-endereco"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Foco inicial no nome
+    document.getElementById("nomeDigitado").focus();
+
+    // Validação do Cadastro
+    function validarFormulario() {
+        let nome = document.getElementById("nomeDigitado");
+        let email = document.getElementById("emailDigitado");
+        let endereco = document.getElementById("enderecoDigitado");
+
+        [nome, email, endereco].forEach(el => el.style.boxShadow = "none");
+
+        if (nome.value.trim() === "") {
+            alert("Por favor, preencha o campo de nome.");
+            nome.style.boxShadow = "0 0 5px #ffc107";
+            nome.focus();
+            return false;
+        }
+        if (email.value.trim() === "") {
+            alert("Por favor, preencha o campo de e-mail.");
+            email.style.boxShadow = "0 0 5px #ffc107";
+            email.focus();
+            return false;
+        }
+        if (endereco.value.trim() === "") {
+            alert("Por favor, preencha o campo de endereço.");
+            endereco.style.boxShadow = "0 0 5px #ffc107";
+            endereco.focus();
+            return false;
+        }
+        return true;
+    }
+
+    // Lógica da Consulta
+    function popularTabela(json) {
+        if (!json.sucesso || !json.cadastro) {
+            alert("Nenhum registro encontrado.");
+            document.getElementById('tabelaResultado').style.display = 'none';
+            return;
+        }
+
+        document.getElementById('col-id').textContent       = json.cadastro.id;
+        document.getElementById('col-nome').textContent     = json.cadastro.nome;
+        document.getElementById('col-email').textContent    = json.cadastro.email;
+        document.getElementById('col-endereco').textContent = json.cadastro.endereco;
+
+        document.getElementById('tabelaResultado').style.display = 'block';
+    }
+
+    document.getElementById('consultaForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const email = document.getElementById('emailBusca').value;
+        const btn = document.getElementById('btnConsultar');
+
+        btn.disabled = true;
+        btn.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Consultando...';
+        document.getElementById('tabelaResultado').style.display = 'none';
+
+        try {
+            const formData = new FormData();
+            formData.append('email', email);
+
+            const response = await fetch('consulta.php', {
+                method: 'POST',
+                body: formData
+            });
+
+            const json = await response.json();
+            popularTabela(json);
+
+        } catch (err) {
+            alert('Erro na consulta. Verifique se o servidor está ativo.');
+        } finally {
+            btn.disabled = false;
+            btn.textContent = 'Consultar Dados';
+        }
+    });
+</script>
+
+<script>
+    /* ── Intercepta o submit do formulário de cadastro e exibe feedback JSON ── */
+    (function () {
+        const formCadastro = document.getElementById('formCadastro');
+        const feedback     = document.getElementById('feedbackCadastro');
+        const btn          = formCadastro.querySelector('button[type="submit"]');
+
+        formCadastro.addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            // Reutiliza a validação já existente na página
+            if (!validarFormulario()) return;
+
+            feedback.style.display = 'none';
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Enviando…';
+
+            try {
+                const resposta = await fetch('process.php', {
+                    method: 'POST',
+                    body: new FormData(formCadastro)
+                });
+
+                const json = await resposta.json();
+
+                if (json.sucesso) {
+                    feedback.className = 'alert alert-success';
+                    feedback.innerHTML =
+                        '<strong>✅ ' + json.mensagem + '</strong>' +
+                        '<br><small class="text-muted">ID do cadastro: #' + json.id + '</small>';
+                    formCadastro.reset();
+                    document.getElementById('nomeDigitado').focus();
+                } else {
+                    const erros = json.erros
+                        ? json.erros.map(e => '<li>' + e + '</li>').join('')
+                        : '<li>' + (json.erro || 'Erro desconhecido.') + '</li>';
+                    feedback.className = 'alert alert-danger';
+                    feedback.innerHTML =
+                        '<strong>❌ Não foi possível concluir o cadastro:</strong>' +
+                        '<ul class="mb-0 mt-1">' + erros + '</ul>';
+                }
+
+            } catch (_) {
+                feedback.className = 'alert alert-warning';
+                feedback.innerHTML = '⚠️ Falha na comunicação com o servidor.';
+            } finally {
+                feedback.style.display = 'block';
+                btn.disabled = false;
+                btn.textContent = 'Cadastrar';
+            }
+        });
+    }());
+</script>
+
+</body>
+</html>

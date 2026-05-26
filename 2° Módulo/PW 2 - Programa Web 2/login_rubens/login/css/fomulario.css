@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    height: 100vh;
+    /* Um gradiente sutil deixa o fundo menos "chapado" e mais moderno */
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', 'Segoe UI', sans-serif; /* Inter é a queridinha do design moderno */
+}
+
+.contorno {
+    background-color: #ffffff; /* Fundo branco ou levemente cinza traz clareza */
+    border: none; /* Removi a borda preta para um look mais "clean" */
+    border-radius: 12px; /* Cantos um pouco mais arredondados */
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 400px;
+    /* Sombra mais suave e moderna */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #3b82f6; /* Destaque azul ao clicar */
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2563eb; /* Azul Vibrante */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #1d4ed8; /* Escurece levemente no hover */
+    transform: translateY(-1px); /* Efeito sutil de flutuar */
+}
+
+h1 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #1e293b; /* Azul quase preto para o título */
+    font-family: 'Segoe UI', sans-serif; /* Padronizei a fonte para ser mais coesa */
+}
+
+p {
+    font-size: 15px;
+    color: #64748b; /* Cinza azulado para o subtítulo */
+    margin-bottom: 30px;
+    line-height: 1.6;
+}

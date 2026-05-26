@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Cadastral</title>
+    <link rel="stylesheet" type="text/css" href="css/fomulario.css">
+    <style>
+        /* Alerta de feedback posicionado abaixo do card */
+        #feedback {
+            display: none;
+            margin-top: 1.2rem;
+            padding: 1rem 1.2rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        #feedback.sucesso {
+            background: #d1fae5;
+            border: 1px solid #6ee7b7;
+            color: #065f46;
+        }
+
+        #feedback.erro {
+            background: #fee2e2;
+            border: 1px solid #fca5a5;
+            color: #991b1b;
+        }
+
+        #feedback .icone {
+            font-size: 1.3rem;
+            margin-right: 0.4rem;
+            vertical-align: middle;
+        }
+
+        #feedback .detalhe {
+            display: block;
+            margin-top: 0.4rem;
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="contorno">
+        <h1>Ficha Cadastral</h1>
+        <p>Preencha os campos abaixo com suas informações para se cadastrar
+            em nosso banco de talentos!</p>
+        <p>É importante que nenhum campo fique em branco para facilitar nosso
+            contato com você.</p>
+
+        <form id="formCadastro" novalidate>
+            <input type="text"  name="nome"     id="nomeDigitado"     placeholder="Nome"><br><br>
+            <input type="text"  name="email"    id="emailDigitado"    placeholder="E-mail"><br><br>
+            <input type="text"  name="endereco" id="enderecoDigitado" placeholder="Endereço"><br><br>
+            <button type="submit" id="btnCadastrar">Cadastrar</button>
+        </form>
+
+        <div id="feedback" role="alert"></div>
+    </div>
+
+    <script src="js/cadastro-feedback.js"></script>
+</body>
+</html>

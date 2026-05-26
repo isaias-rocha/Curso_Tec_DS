@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" type="text/css" href="css/fomulario.css">
+</head>
+<body>
+    <div class="contorno">
+        <h1>Ficha Cadastral</h1>
+        <p>Preencha os campos abaixo com suas informações para se cadastrar 
+            em nosso banco de talentos!</p>
+        <p>É importante que nenhum campo fique em branco para facilitar nosso 
+            contato com você.</p>
+
+        <!--
+            <form> envolve todos os campos e define:
+              action  → para qual arquivo os dados serão enviados
+              method  → "post" envia os dados no corpo da requisição (não aparece na URL)
+        -->
+        <form action="process.php" method="post">
+
+            <input type="text" name="nome" id="nomeDigitado" placeholder="Nome"><br><br>
+            <input type="text" name="email" id="emailDigitado" placeholder="E-mail"><br><br>
+            <input type="text" name="endereco" id="enderecoDigitado" placeholder="Endereço"><br><br>
+
+            <!--
+                type="submit" dentro de um <form> envia os dados ao action.
+                O onclick ainda chama validarFormulario() antes de enviar —
+                se a função retornar false, o envio é cancelado.
+            -->
+            <button type="submit" onclick="return validarFormulario()">Cadastrar</button>
+
+        </form>
+    </div>
+
+    <script>
+        // Coloca o foco no campo de nome para facilitar o preenchimento do formulário
+        document.getElementById("nomeDigitado").focus();
+
+        function validarFormulario() {
+            let nome     = document.getElementById("nomeDigitado").value;
+            let email    = document.getElementById("emailDigitado").value;
+            let endereco = document.getElementById("enderecoDigitado").value;
+
+            if (nome === "") {
+                alert("Por favor, preencha o campo de nome.");
+                document.getElementById("nomeDigitado").style.boxShadow =
+                    "3px 3px 5px yellow";
+                return false; // cancela o envio do formulário
+            }
+
+            if (email === "") {
+                alert("Por favor, preencha o campo de e-mail.");
+                document.getElementById("emailDigitado").style.boxShadow =
+                    "3px 3px 5px yellow";
+                return false;
+            }
+
+            if (endereco === "") {
+                alert("Por favor, preencha o campo de endereço.");
+                document.getElementById("enderecoDigitado").style.boxShadow =
+                    "3px 3px 5px yellow";
+                return false;
+            }
+
+            return true; // libera o envio para o process.php
+        }
+    </script>
+</body>
+</html>
